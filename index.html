@@ -5,32 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная - нн</title>
     <meta name="description" content="нн-нн-нн">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script src="src/contact-form.js" defer></script>
 </head>
 <body>
     <header>
-        <a href="/">лого-нн</a>
+        <a href="/" class="logo">
+            <img src="/assets/icon.png" alt="лого">
+        </a>
         <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="src/about.html">О нас</a></li>
-                <li><a href="src/contacts.html">Контакты</a></li>
-            </ul>
+            <a href="index.html" id="activeWindowInNav">Главная</a>
+            <a href="src/about.html">О ветросетике</a>
+            <a href="src/contacts.html">Контакты</a>
         </nav>
     </header>
 
     <main>
-        <h1>Крутейший сайт</h1>
+        <h1>ветросетик.ру</h1>
 
         <section id="services">
             <h2>Наши услуги</h2>
-            <p>ннннннн</p>
+            <p>фарм ветросетика</p>
+            <p>выбивание танцулечек</p>
             <a href="#contacts">Связаться с нами</a>
         </section>
 
         <section id="portfolio">
             <h2>Портфолио</h2>
             <p>Примеры наших работ</p>
+            <p>фарм ветросетика</p>
+            <p>фарм ветросетика</p>
+            <p>фарм ветросетика</p>
+            <p>фарм ветросетика</p>
+            <p>фарм ветросетика</p>
+            <p>фарм ветросетика</p>
+            <p>фарм ветросетика</p>
+            <p>фарм ветросетика</p>
+            <p>фарм ветросетика</p>
+            <p>фарм ветросетика</p>
+            <p>фарм ветросетика</p>
+            <p>фарм ветросетика</p>
+            <p>фарм ветросетика</p>
         </section>
 
         <section id="contacts">
@@ -38,11 +54,50 @@
             <p>Наши контакты...</p>
             <a href="src/contacts.html">Подробнее</a>
         </section>
+        
+        <button id="openDialog" type="button">Написать нам</button>
+
+        <dialog id="contactDialog" aria-labelledby="dialogTitle">
+            <h2>Обратная связь</h2>
+
+            <form id="contactForm" method="dialog" novalidate>
+                <label for="name">Имя</label>
+                <input type="text" name="name" id="name" required minlength="2" autocomplete="given-name">
+
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" required
+                autocomplete="email">
+
+                <label for="phone">Телефон</label>
+                <input id="phone" name="phone" type="tel" inputmode="tel"
+                autocomplete="tel"
+                aria-describedby="phoneHelp" placeholder="+7 (___) ___-__-__"
+                required pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$">
+                <small id="phoneHelp">Формат: +7 (900) 000-00-00</small>
+
+                <label for="date">Дата</label>
+                <input id="date" name="date" type="date">
+
+                <label for="topic">Тема</label>
+                <select id="topic" name="topic" required>
+                    <option value="">Выберите тему</option>
+                    <option>Вопрос</option>
+                    <option>Заказ</option>
+                </select>
+
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <div class="form-actions">
+                    <button type="button" id="closeDialog">Закрыть</button>
+                    <button type="submit">Отправить</button>
+                </div>
+            </form>
+        </dialog>
     </main>
 
     <footer>
         <p>&copy; 2025 нн</p>
-        <p>Телефон: +н ннн ннн-нн-нн</p>
+        <p>Телефон: +7 (967) XXX-XX-XX</p>
     </footer>
 </body>
 </html>

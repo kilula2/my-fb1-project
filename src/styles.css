@@ -1,0 +1,143 @@
+:root {
+    /* палитра */
+    --color-bg: #fff;
+    --color-first: rgb(75, 192, 192);
+    /* скругления и тени */
+}
+
+
+
+* { 
+    box-sizing: border-box;
+}
+html, body { 
+    margin: 0; 
+    padding: 0; 
+    scroll-behavior: smooth;
+    font-family: "Sora", sans-serif;
+    font-weight: 300;
+}
+
+
+/* футер */
+footer {
+    background-color: var(--color-first);
+    color: #fff;
+    margin-top: 20px;
+    padding: 20px;
+
+}
+
+
+/* верхнее меню */
+header {
+    height: 10vh;
+    background-color: var(--color-first);
+    color: var(--color-bg);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.logo {
+    margin: 0 2vh;
+    width: 8vh;
+    height: auto;
+}
+
+.logo img {
+    width: 90%;
+}
+
+nav {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header nav a {
+    display: block;
+    width: 70%;
+    height: 10vh;
+    background-color: var(--color-first);
+    color: var(--color-bg);
+    text-decoration-line: none;
+    text-align: center;
+    padding-top: 3.5vh;
+}
+
+header nav a:hover {
+    filter: brightness(0.90);
+}
+
+#activeWindowInNav {
+    filter: brightness(0.90);
+}
+
+header nav a:active {
+    filter: brightness(0.80);
+}
+
+
+/* основая часть */
+main {
+
+}
+
+.breadcrumbs {
+    
+}
+
+
+/* форма */
+dialog {
+    border-radius: 8px;
+}
+
+label { 
+    display: block; 
+    margin: 0.5rem 0 0.25rem; 
+}
+
+input, select, textarea, button {
+    width: 100%;
+    max-width: 480px;
+    padding: .5rem .75rem;
+    border: 1px solid #c8c8c8;
+    border-radius: 8px;
+    background: var(--color-bg);
+}
+ 
+button, [type="submit"] {
+    background: var(--color-first);
+    color: var(--color-bg);
+    border: none;
+    cursor: pointer;
+    margin-top: 2vh;
+}
+
+:where(input, select, textarea, button):focus-visible {
+    outline: 2px solid var(--color-first); 
+    outline-offset: 2px;
+}
+
+button:hover { 
+    filter: brightness(0.95); 
+}
+
+button:active { 
+    filter: brightness(0.8); 
+}
+
+
+:disabled, [aria-disabled="true"] { 
+    opacity: .6; cursor: not-allowed; 
+}
+
+[aria-invalid="true"] { 
+    border-color: #b00020; 
+}
+
