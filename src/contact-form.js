@@ -48,9 +48,10 @@ form.addEventListener('submit', (e) => {
 });
 
 
+// нормализация номера
 phone?.addEventListener('input', () => {
-    const digits = phone.value.replace(/\D/g,'').slice(0,11); // до 11 цифр
-    const d = digits.replace(/^8/, '7'); // нормализуем 8 в 7
+    const digits = phone.value.replace(/\D/g,'').slice(0,11); 
+    const d = digits.replace(/^8/, '7');
     const parts = [];
     if (d.length > 0) parts.push('+7');
     if (d.length > 1) parts.push(' (' + d.slice(1,4));
