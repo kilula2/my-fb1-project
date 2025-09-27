@@ -2,22 +2,36 @@
     /* палитра */
     --color-bg: #fff;
     --color-first: rgb(75, 192, 192);
+    --color-text: black;
+    --color-text-but: #fff;
     /* скругления и тени */
+    --bord-rad: 9px;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .08), 0 8px 24px rgba(0, 0, 0, .08)
 }
 
-
+body.theme-dark {
+    --color-bg: #0b0b0b; 
+    --color-first: rgb(41, 105, 105); 
+    --color-text: #fff;
+}
 
 * { 
     box-sizing: border-box;
 }
+
 html, body { 
     margin: 0; 
     padding: 0; 
     scroll-behavior: smooth;
     font-family: "Sora", sans-serif;
     font-weight: 300;
+    background-color: var(--color-bg);
+    overflow-x: hidden;
 }
 
+a {
+    text-decoration-line: none;
+}
 
 /* футер */
 footer {
@@ -25,12 +39,13 @@ footer {
     color: #fff;
     margin-top: 20px;
     padding: 20px;
-
 }
 
 
 /* верхнее меню */
 header {
+    position: fixed;
+    width: 100vw;
     height: 10vh;
     background-color: var(--color-first);
     color: var(--color-bg);
@@ -38,19 +53,26 @@ header {
     display: flex;
     align-items: center;
     flex-direction: row;
+    /* opacity: 0.7; */
 }
 
-.logo {
+.header__logo {
     margin: 0 2vh;
     width: 8vh;
     height: auto;
 }
 
-.logo img {
+.header__logo_logo{
     width: 90%;
 }
 
-nav {
+.header__title {
+    color: var(--color-text-but);
+    font-size: 20px;
+    margin-right: 2vw;
+}
+
+.header__nav {
     width: 60vw;
     display: flex;
     flex-direction: row;
@@ -58,43 +80,138 @@ nav {
     justify-content: space-around;
 }
 
-header nav a {
+.header__nav_link {
     display: block;
     width: 70%;
     height: 10vh;
     background-color: var(--color-first);
-    color: var(--color-bg);
-    text-decoration-line: none;
+    color: var(--color-text-but);
     text-align: center;
     padding-top: 3.5vh;
 }
 
-header nav a:hover {
-    filter: brightness(0.90);
+.header__nav_link:hover {
+    filter: brightness(.90);
 }
 
-#activeWindowInNav {
-    filter: brightness(0.90);
+.header__nav_link-active {
+    filter: brightness(.90);
 }
 
-header nav a:active {
-    filter: brightness(0.80);
+.header__nav_link:active {
+    filter: brightness(.80);
+}
+
+.header__theme {
+    border-radius: 10px;
+    background-color: var(--color-bg);
+    width: 5vw;
+
+}
+
+.breadcrumbs {
 }
 
 
 /* основая часть */
 main {
+    margin-top: 10vh;
+    width: 100vw;
+    box-sizing: border-box;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section {
+    background-color: #5fce9971;
+    border-radius: 16px;
+    padding: 15px 35px;
+    margin: 10px;
+    width: 75vw;
 
 }
 
-.breadcrumbs {
-    
+#ad1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 25px;
 }
+#ad1 video {
+    width: 15vw;
+    border-radius: 15px;
+}
+.ad1__flextext {
+    width: auto;
+    margin: 20px;
+}
+
+#texts {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+#texts p {
+    width: 20vw;
+    margin: 1vw;
+}
+
+
+
+.stepsIn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.stepsIn .step {
+    width: 15vw;
+}
+.stepsIn .step img {
+    width: 15vw;
+}
+
+.doPosle__flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.doPosle__flex img {
+    width: 300px;
+    height: 300px;
+}
+.doPosle__flex_el p {
+    font-size: 30px;
+}
+
+.doctors__flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.doctors__flex_doc {
+    width: 15vw;
+}
+.doctors__flex_doc img {
+    width: 15vw;
+}
+
+
+
+
+
+
+
+
 
 
 /* форма */
 dialog {
-    border-radius: 8px;
+    min-width: 350px;
+    border-radius: var(--bord-rad);
 }
 
 label { 
@@ -107,13 +224,13 @@ input, select, textarea, button {
     max-width: 480px;
     padding: .5rem .75rem;
     border: 1px solid #c8c8c8;
-    border-radius: 8px;
+    border-radius: var(--bord-rad);
     background: var(--color-bg);
 }
- 
+
 button, [type="submit"] {
     background: var(--color-first);
-    color: var(--color-bg);
+    color: var(--color-text-but);
     border: none;
     cursor: pointer;
     margin-top: 2vh;
@@ -124,12 +241,16 @@ button, [type="submit"] {
     outline-offset: 2px;
 }
 
+#message {
+    min-width: 30px;
+}
+
 button:hover { 
-    filter: brightness(0.95); 
+    filter: brightness(.95); 
 }
 
 button:active { 
-    filter: brightness(0.8); 
+    filter: brightness(.8); 
 }
 
 
@@ -140,4 +261,3 @@ button:active {
 [aria-invalid="true"] { 
     border-color: #b00020; 
 }
-

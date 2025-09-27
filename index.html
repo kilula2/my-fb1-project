@@ -8,19 +8,23 @@
     <link rel="icon" href="assets/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/src/styles.css">
     <script src="src/contact-form.js" defer></script>
+    <script src="src/styles.js" defer></script>
 </head>
 <body>
-    <header>
-        <a href="/" class="logo">
-            <img src="/assets/icon.png" alt="лого">
+    <header class="header">
+        <a href="/" class="header__logo">
+            <img src="/assets/icon.png" alt="лого" class="header__logo_logo">
         </a>
-        <nav>
-            <a href="index.html" id="activeWindowInNav">Главная</a>
-            <a href="src/about.html">О ветросетике</a>
-            <a href="src/contacts.html">Контакты</a>
+        <!-- <a class="header__title" href="/">Фарм ветросетика</a> -->
+        <nav class="header__nav">
+            <a href="index.html" class="header__nav_link header__nav_link-active">Главная</a>
+            <a href="src/about.html" class="header__nav_link">О ветросетике</a>
+            <a href="src/contacts.html" class="header__nav_link">Контакты</a>
         </nav>
+        <!-- <button class="header__theme" id="butToggleTheme"></button> -->
     </header>
 
+   
     <main>
         <h1>ветросетик.ру</h1>
 
@@ -31,22 +35,94 @@
             <a href="#contacts">Связаться с нами</a>
         </section>
 
-        <section id="portfolio">
-            <h2>Портфолио</h2>
-            <p>Примеры наших работ</p>
-            <p>фарм ветросетика</p>
-            <p>фарм ветросетика</p>
-            <p>фарм ветросетика</p>
-            <p>фарм ветросетика</p>
-            <p>фарм ветросетика</p>
-            <p>фарм ветросетика</p>
-            <p>фарм ветросетика</p>
-            <p>фарм ветросетика</p>
-            <p>фарм ветросетика</p>
-            <p>фарм ветросетика</p>
-            <p>фарм ветросетика</p>
-            <p>фарм ветросетика</p>
-            <p>фарм ветросетика</p>
+        <section id="ad1">
+            <video src="assets/cat-to-tyan.mp4" autoplay loop muted></video>
+            <div class="ad1__flextext">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, libero.</p>
+                <ul>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                </ul>
+                <button>Получить консультацию</button>
+            </div>
+            
+        </section>
+
+        <section id="texts">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio illum iste quod nobis autem culpa! Neque nihil nobis accusantium.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veritatis quibusdam aut rem quisquam cupiditate, officiis illum quis itaque fugiat corrupti.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam magni obcaecati minus necessitatibus illo neque.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic praesentium omnis tenetur laboriosam placeat perspiciatis quisquam! Nesciunt, voluptate.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dicta numquam rem libero magnam praesentium totam nihil dolor doloribus voluptates, expedita fugiat ipsum quis deserunt? Recusandae?</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus quod atque voluptatem nostrum dolor nam, cumque veniam!</p>
+        </section>
+
+        <section id="steps">
+            <h2>ВВВЕеееетросеепит</h2>
+            <div class="stepsIn">
+                <div class="step">
+                    <img src="assets/1c.jpg" alt="photo">
+                    <h4>step 1</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem, ipsum dolor.</p>
+                </div>
+                <div class="step">
+                    <img src="assets/1c.jpg" alt="photo">
+                    <h4>step 2</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing illo ullam tempora odit repellat quisquam.</p>
+                </div>
+                <div class="step">
+                    <img src="assets/1c.jpg" alt="photo">
+                    <h4>step 3</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro impedit molestias voluptatibus illo ullam tempora odit repellat quisquam.</p>
+                </div>
+                <div class="step">
+                    <img src="assets/1c.jpg" alt="photo">
+                    <h4>step 4</h4>
+                    <p>Lorem ipsum dolor sit amet, elit. Porro impedit molestias voluptatibus illo ullam tempora odit repellat quisquam.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="doPosle">
+            <h2>Посмотрите как меняются наши клиенты</h2>
+            <div class="doPosle__flex">
+                <div class="doPosle__flex_el">
+                    <p>До:</p>
+                    <div class="doP">
+                        <img src="assets/icon.png" alt="">
+                    </div>
+                </div>
+                <div class="doPosle__flex_el">
+                    <p>После:</p>
+                    <div class="doP">
+                        <img src="assets/1c.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="doctors">
+            <h2>Наши сотрудники</h2>
+            <div class="doctors__flex">
+                <div class="doctors__flex_doc">
+                    <img src="assets/legend.jpg" alt="photo">
+                    <p>главный основной работник компаниии тащит все на своем горбу </p>
+                </div>
+                <div class="doctors__flex_doc">
+                    <img src="assets/pdd.png" alt="photo">
+                    <p>текст о нашем работнике он крутой наверн хз 1 2 3 4 </p>
+                </div>
+                <div class="doctors__flex_doc">
+                    <img src="assets/daryana.jpg" alt="photo">
+                    <p>текст о нашем работнике дарьяна</p>
+                </div>
+                <div class="doctors__flex_doc">
+                    <img src="assets/dora.jpg" alt="photo">
+                    <p>текст о нашем работнике дора</p>
+                </div>
+            </div>
+            
         </section>
 
         <section id="contacts">
@@ -94,6 +170,7 @@
             </form>
         </dialog>
     </main>
+    
 
     <footer>
         <p>&copy; 2025 нн</p>
