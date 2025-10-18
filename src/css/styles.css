@@ -1,0 +1,325 @@
+:root {
+    --bg-first: #121212;
+    --bg-sec: #1e1e1e;
+    --accent-purple: #bb86fc;
+    --accent-teal: #03dac6;
+    --text-first: #e0e0e0;
+    --text-sec: #a0a0a0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg-first);
+    color: var(--text-first);
+    line-height: 1.7;
+}
+
+.font-mono {
+    font-family: "JetBrains Mono", monospace;
+}
+
+/* Header Styles */
+.navbar {
+    background: rgba(30, 30, 30, 0.95) !important;
+    backdrop-filter: blur(7px);
+    border-bottom: 1px solid #333;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 600;
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+}
+
+.nav-link {
+    color: var(--text-sec) !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--accent-purple) !important;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-purple);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/elec.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+.hero-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(18, 18, 18, 0.9) 0%,
+        rgba(30, 30, 30, 0.7) 50%,
+        rgba(18, 18, 18, 0.9) 100%
+    );
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons */
+.btn-primary-custom {
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-teal));
+    border: none;
+    color: var(--bg-primary);
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary-custom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+    z-index: -1;
+}
+
+.btn-primary-custom:hover::before {
+    left: 100%;
+}
+
+.btn-primary-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(187, 134, 252, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-bg {
+        background-position: 60% center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+}
+
+.music-section img {
+    width: 100%;
+}
+
+/* Feature Cards */
+.feature-card {
+    background: var(--bg-sec);
+    border-radius: 12px;
+    padding: 2rem;
+    height: 100%;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: var(--accent-purple);
+    transition: left 0.5s ease;
+}
+
+.feature-card:hover::before {
+    left: 0;  
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-purple);
+    box-shadow: 0 10px 30px rgba(187, 134, 252, 0.1);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Buttons */
+.btn-first-custom {
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-teal));
+    border: none;
+    color: var(--bg-first);
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-first-custom::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-first-custom:hover::before {
+    left: 100%;
+}
+
+.btn-first-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(187, 134, 252, 0.3);
+}
+
+/* Footer */
+.footer {
+    background: var(--bg-sec);
+    border-top: 1px solid #333;
+    padding: 3rem 0 2rem;
+    margin-top: 4rem;
+}
+
+.footer-link {
+    color: var(--text-sec);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--accent-purple);
+}
+
+.footer hr {
+    border-color: #333;
+}
+
+.music-section {
+    background: rgba(30, 30, 30, 0.6);
+    border-radius: 12px;
+    padding: 3rem;
+    border-left: 4px solid var(--accent-teal);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btnMainToMenu {
+    display: flex;
+    justify-content: center;
+}
+
+.btnMainToMenu .btn {
+    width: 50vw;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+}

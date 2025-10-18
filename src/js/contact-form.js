@@ -61,7 +61,3 @@ phone?.addEventListener('input', () => {
     if (d.length >= 10) parts.push('-' + d.slice(9,11));
     phone.value = parts.join('');
 });
-
-
-
-
