@@ -6,175 +6,181 @@
     <title>Главная - нн</title>
     <meta name="description" content="нн-нн-нн">
     <link rel="icon" href="assets/icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/src/styles.css">
-    <script src="src/contact-form.js" defer></script>
-    <script src="src/styles.js" defer></script>
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <script src="src/js/contact-form.js" defer></script>
+    <script src="src/js/bootstrap.bundle.min.js" defer></script>
+    <script src="src/js/styles.js" defer></script>
 </head>
 <body>
-    <header class="header">
-        <a href="/" class="header__logo">
-            <img src="/assets/icon.png" alt="лого" class="header__logo_logo">
-        </a>
-        <!-- <a class="header__title" href="/">Фарм ветросетика</a> -->
-        <nav class="header__nav">
-            <a href="index.html" class="header__nav_link header__nav_link-active">Главная</a>
-            <a href="src/about.html" class="header__nav_link">О ветросетике</a>
-            <a href="src/contacts.html" class="header__nav_link">Контакты</a>
-        </nav>
-        <!-- <button class="header__theme" id="butToggleTheme"></button> -->
-    </header>
-
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">БАР[403]</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <div class="nav-item">
+                        <a class="nav-link active" href="#">Главная</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="menu.html">Меню</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="events.html">Афиша</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="gallery.html">Галерея</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
    
-    <main>
-        <h1>ветросетик.ру</h1>
-
-        <section id="services">
-            <h2>Наши услуги</h2>
-            <p>фарм ветросетика</p>
-            <p>выбивание танцулечек</p>
-            <a href="#contacts">Связаться с нами</a>
-        </section>
-
-        <section id="ad1">
-            <video src="assets/cat-to-tyan.mp4" autoplay loop muted></video>
-            <div class="ad1__flextext">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, libero.</p>
-                <ul>
-                    <li>Lorem, ipsum dolor.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem ipsum dolor sit.</li>
-                </ul>
-                <button>Получить консультацию</button>
-            </div>
-            
-        </section>
-
-        <section id="texts">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio illum iste quod nobis autem culpa! Neque nihil nobis accusantium.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veritatis quibusdam aut rem quisquam cupiditate, officiis illum quis itaque fugiat corrupti.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam magni obcaecati minus necessitatibus illo neque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic praesentium omnis tenetur laboriosam placeat perspiciatis quisquam! Nesciunt, voluptate.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dicta numquam rem libero magnam praesentium totam nihil dolor doloribus voluptates, expedita fugiat ipsum quis deserunt? Recusandae?</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus quod atque voluptatem nostrum dolor nam, cumque veniam!</p>
-        </section>
-
-        <section id="steps">
-            <h2>ВВВЕеееетросеепит</h2>
-            <div class="stepsIn">
-                <div class="step">
-                    <img src="assets/1c.jpg" alt="photo">
-                    <h4>step 1</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem, ipsum dolor.</p>
-                </div>
-                <div class="step">
-                    <img src="assets/1c.jpg" alt="photo">
-                    <h4>step 2</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing illo ullam tempora odit repellat quisquam.</p>
-                </div>
-                <div class="step">
-                    <img src="assets/1c.jpg" alt="photo">
-                    <h4>step 3</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro impedit molestias voluptatibus illo ullam tempora odit repellat quisquam.</p>
-                </div>
-                <div class="step">
-                    <img src="assets/1c.jpg" alt="photo">
-                    <h4>step 4</h4>
-                    <p>Lorem ipsum dolor sit amet, elit. Porro impedit molestias voluptatibus illo ullam tempora odit repellat quisquam.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title font-mono">БАР403</h1>
+                    <p class="hero-subtitle">Укромное место для своих. Скрытая дверь в параллельную реальность.</p>
+                    <button class="btn btn-primary-custom font-mono" onclick="location.href='contacts.html'">
+                        УЗНАТЬ КОД ОТ ДВЕРИ
+                    </button>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="doPosle">
-            <h2>Посмотрите как меняются наши клиенты</h2>
-            <div class="doPosle__flex">
-                <div class="doPosle__flex_el">
-                    <p>До:</p>
-                    <div class="doP">
-                        <img src="assets/icon.png" alt="">
+    <section class="description py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="text-center mb-5 font-mono gradient-text">МЕСТО СИЛЫ ДЛЯ ******</h2>
+                    <p class="text-center mb-5 fs-5">
+                        Бар403 — это не просто точка на карте, а состояние души. Наше пространство создано для тех, 
+                        кто ценит уединение, качественную музыку и искренние разговоры. Мы тщательно избегаем всего 
+                        мейнстримного — от дизайна до музыкального сопровождения.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="music-section">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <h3 class="font-mono gradient-text mb-4">НАША МУЗЫКА</h3>
+                        <p class="mb-4">
+                            Музыка в Бар403 — это отдельная философия. Мы создали акустическую вселенную, где каждый вечер — это уникальное путешествие 
+                            по лабиринтам альтернативного звука.
+                        </p>
+                        <p class="mb-4">
+                            Наш саундтрек — это глубокое погружение 
+                            в альтернативную сцену: от брит-попа 90-х и шугейза до экспериментального электро 
+                            и абстрактного хип-хопа. 
+                        </p>
+                        <p class="mb-0">
+                            Мы коллекционируем виниловые пластинки редких выпусков и поддерживаем локальных музыкантов. 
+                            Каждый вечер — это уникальный аудио-трип, составленный нашими диджеями.
+                        </p>
+                    </div>
+                    <div class="col-3"><img src="assets/disco.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 font-mono gradient-text">НАШ АЛКОГОЛЬ</h2>
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><img src="assets/shots.jpg" alt="настойки"></div>
+                        <h4 class="font-mono">Эксклюзивные настойки</h4>
+                        <p class="text-secondary">
+                            Более 15 уникальных рецептов, которые мы готовим вручную небольшими партиями. 
+                            Каждая настойка имеет свой характер и историю.
+                        </p>
                     </div>
                 </div>
-                <div class="doPosle__flex_el">
-                    <p>После:</p>
-                    <div class="doP">
-                        <img src="assets/1c.jpg" alt="">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><img src="assets/cockts.jpg" alt="коктейли"></div>
+                        <h4 class="font-mono">Авторские коктейли</h4>
+                        <p class="text-secondary">
+                            Наши бармены создают напитки, вдохновленные альтернативной культурой 
+                            и настроением бара.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><img src="assets/ersh.jpg" alt="ерш"></div>
+                        <h4 class="font-mono">Культовый ерш</h4>
+                        <p class="text-secondary">
+                            Возрождаем легенду андеграундных вечеринок — правильный ерш, 
+                            который стал нашим символом.
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id="doctors">
-            <h2>Наши сотрудники</h2>
-            <div class="doctors__flex">
-                <div class="doctors__flex_doc">
-                    <img src="assets/legend.jpg" alt="photo">
-                    <p>главный основной работник компаниии тащит все на своем горбу </p>
-                </div>
-                <div class="doctors__flex_doc">
-                    <img src="assets/pdd.png" alt="photo">
-                    <p>текст о нашем работнике он крутой наверн хз 1 2 3 4 </p>
-                </div>
-                <div class="doctors__flex_doc">
-                    <img src="assets/daryana.jpg" alt="photo">
-                    <p>текст о нашем работнике дарьяна</p>
-                </div>
-                <div class="doctors__flex_doc">
-                    <img src="assets/dora.jpg" alt="photo">
-                    <p>текст о нашем работнике дора</p>
-                </div>
+            <div class="row btnMainToMenu">
+                <button class="btn btn-primary-custom font-mono btnMainToMenu" onclick="location.href='menu.html'">
+                    ПОСМОТРЕТЬ МЕНЮ
+                </button>
             </div>
             
-        </section>
+                
+        </div>
+    </section>
 
-        <section id="contacts">
-            <h2>Контактная информация</h2>
-            <p>Наши контакты...</p>
-            <a href="src/contacts.html">Подробнее</a>
-        </section>
-        
-        <button id="openDialog" type="button">Написать нам</button>
-
-        <dialog id="contactDialog" aria-labelledby="dialogTitle">
-            <h2>Обратная связь</h2>
-
-            <form id="contactForm" method="dialog" novalidate>
-                <label for="name">Имя</label>
-                <input type="text" name="name" id="name" required minlength="2" autocomplete="given-name">
-
-                <label for="email">E-mail</label>
-                <input id="email" name="email" type="email" required
-                autocomplete="email">
-
-                <label for="phone">Телефон</label>
-                <input id="phone" name="phone" type="tel" inputmode="tel"
-                autocomplete="tel"
-                aria-describedby="phoneHelp" placeholder="+7 (___) ___-__-__"
-                required pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$">
-                <small id="phoneHelp">Формат: +7 (900) 000-00-00</small>
-
-                <label for="date">Дата</label>
-                <input id="date" name="date" type="date">
-
-                <label for="topic">Тема</label>
-                <select id="topic" name="topic" required>
-                    <option value="">Выберите тему</option>
-                    <option>Вопрос</option>
-                    <option>Заказ</option>
-                </select>
-
-                <label for="message">Сообщение</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                <div class="form-actions">
-                    <button type="button" id="closeDialog">Закрыть</button>
-                    <button type="submit">Отправить</button>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="font-mono gradient-text">БАР[403]</h5>
+                    <p class="text-secondary">Андеграундная рюмочная с хорошей музыкой и атмосферой.</p>
                 </div>
-            </form>
-        </dialog>
-    </main>
-    
-
-    <footer>
-        <p>&copy; 2025 нн</p>
-        <p>Телефон: +7 (967) XXX-XX-XX</p>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="text-light">Контакты</h6>
+                    <p class="text-secondary mb-1">г. Москва, ул. 11-я Парковая, 36</p>
+                    <p class="text-secondary mb-1">18+</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="text-light">Ссылки</h6>
+                    <div class="d-flex flex-column">
+                        <a href="https://t.me/bar403_life" class="footer-link mb-2">Telegram-канал</a>
+                        <a href="https://vk.com/bar403" class="footer-link mb-2">VK</a>
+                        <a href="https://t.me/bar403_music" class="footer-link mb-2">Музыкальный плейлист</a>
+                        <a href="https://t.me/bar403_admin" class="footer-link">Резервация</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-secondary mb-0">© Бар403, 2025. Дверь открыта для случайных людей.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-secondary mb-0">Код от двери: #403</p>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
