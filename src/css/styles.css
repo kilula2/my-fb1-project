@@ -5,6 +5,7 @@
     --accent-teal: #03dac6;
     --text-first: #e0e0e0;
     --text-sec: #a0a0a0;
+    --text-price: #9547ab;
 }
 
 body {
@@ -78,6 +79,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    min-height: 100vh;
     background-image: url('/assets/elec.jpg');
     background-size: cover;
     background-position: center;
@@ -94,12 +96,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        135deg,
-        rgba(18, 18, 18, 0.9) 0%,
-        rgba(30, 30, 30, 0.7) 50%,
-        rgba(18, 18, 18, 0.9) 100%
-    );
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.9) 0%, rgba(30, 30, 30, 0.7) 50%, rgba(18, 18, 18, 0.9) 100%);
     z-index: 1;
 }
 
@@ -201,11 +198,6 @@ body {
     overflow: hidden;
 }
 
-.feature-icon img {
-    width: 100%;
-    height: auto;
-}
-
 .feature-card::before {
     content: "";
     position: absolute;
@@ -227,12 +219,19 @@ body {
     box-shadow: 0 10px 30px rgba(187, 134, 252, 0.1);
 }
 
-.feature-icon {
-    font-size: 2.5rem;
+.feature-icon img {
+    width: 100%;
+    height: auto;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--accent-purple), var(--accent-teal));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+}
+
+.btnMainToMenu {
+    display: flex;
+    justify-content: center;
+}
+
+.btnMainToMenu .btn {
+    width: 70vw;
 }
 
 /* Buttons */
@@ -303,16 +302,6 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.btnMainToMenu {
-    display: flex;
-    justify-content: center;
-}
-
-.btnMainToMenu .btn {
-    width: 50vw;
-}
-
-
 /* Responsive */
 @media (max-width: 768px) {
     .hero-title {
@@ -322,4 +311,92 @@ body {
     .hero-subtitle {
         font-size: 1.1rem;
     }
+}
+
+/* menu */
+.menu-card {
+    background: var(--bg-sec);
+    border-radius: 12px;
+    padding: 2rem;
+    height: 100%;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: var(--accent-purple);
+    transition: left 0.5s ease;
+}
+
+.menu-card:hover::before {
+    left: 0;  
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-purple);
+    box-shadow: 0 10px 30px rgba(187, 134, 252, 0.1);
+}
+
+.menu-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.menu-card h4 {
+    color: var(--text-first);
+}
+
+.menu-card p {
+    color: var(--text-sec);
+}
+
+.font-price {
+    color: var(--text-price) !important;
+}
+
+dialog {
+    background-color: var(--bg-first);
+    color: var(--text-first);
+}
+
+label { 
+    display: block; 
+    margin: 0.5rem 0 0.25rem; 
+}
+
+#contactForm input, select, textarea, button {
+    width: 100%;
+    max-width: 480px;
+    padding: .5rem .75rem;
+    border: 1px solid #c8c8c8;
+    border-radius: 8px;
+    background: var(--bg-sec);
+}
+
+#contactForm :where(input, select, textarea, button):focus-visible {
+    outline: 2px solid var(--accent-purple); 
+    outline-offset: 2px;
+}
+
+#contactForm .btn { 
+    margin: 0.2rem;
+    filter: brightness(0.95); 
+    padding: 7px 15px;
+}
+#contactForm :disabled, [aria-disabled="true"] { 
+    opacity: .6; 
+    cursor: not-allowed; 
+}
+/* Подсветка ошибочных полей (установите aria-invalid="true") */
+[aria-invalid="true"] { 
+    border-color: #b00020; 
 }
