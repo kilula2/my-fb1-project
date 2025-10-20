@@ -19,7 +19,7 @@ body {
     font-family: "JetBrains Mono", monospace;
 }
 
-/* Header Styles */
+/* хедер */
 .navbar {
     background: rgba(30, 30, 30, 0.95) !important;
     backdrop-filter: blur(7px);
@@ -67,7 +67,7 @@ body {
     width: 20vw;
 }
 
-/* Hero Section */
+/* хиро секция */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -125,7 +125,7 @@ body {
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Buttons */
+/* кнокпи */
 .btn-primary-custom {
     background: linear-gradient(135deg, var(--accent-purple), var(--accent-teal));
     border: none;
@@ -160,7 +160,7 @@ body {
     box-shadow: 0 8px 25px rgba(187, 134, 252, 0.4);
 }
 
-/* Responsive */
+/* адаптив */
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2.5rem;
@@ -186,7 +186,7 @@ body {
     width: 100%;
 }
 
-/* Feature Cards */
+/* карточки */
 .feature-card {
     background: var(--bg-sec);
     border-radius: 12px;
@@ -234,7 +234,7 @@ body {
     width: 70vw;
 }
 
-/* Buttons */
+/* кнопки */
 .btn-first-custom {
     background: linear-gradient(135deg, var(--accent-purple), var(--accent-teal));
     border: none;
@@ -267,7 +267,7 @@ body {
     box-shadow: 0 8px 25px rgba(187, 134, 252, 0.3);
 }
 
-/* Footer */
+/* днище */
 .footer {
     background: var(--bg-sec);
     border-top: 1px solid #333;
@@ -302,7 +302,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-/* Responsive */
+/* адаптив */
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2.5rem;
@@ -313,7 +313,7 @@ body {
     }
 }
 
-/* menu */
+/* меню */
 .menu-card {
     background: var(--bg-sec);
     border-radius: 12px;
@@ -363,9 +363,39 @@ body {
     color: var(--text-price) !important;
 }
 
+
+
+/* галерея */
+.carouselGallery {
+    width: 100%;
+    height: 70vh;
+}
+
+.carouselGallery ul {
+    list-style-type: none;
+}
+
+.carousel-inner img {
+    height: 70vh;
+    width: 100%;
+    min-height: 65vh;
+    max-height: min-content;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* контакты */
+.contactsSection li {
+    margin-bottom: 1rem;
+}
+
+/* форма */
 dialog {
     background-color: var(--bg-first);
     color: var(--text-first);
+    border-color: var(--accent-teal);
+    border-radius: 18px;
+    scrollbar-width: none;
 }
 
 label { 
@@ -377,18 +407,19 @@ label {
     width: 100%;
     max-width: 480px;
     padding: .5rem .75rem;
-    border: 1px solid #c8c8c8;
+    border: 1px solid var(--text-sec);
     border-radius: 8px;
     background: var(--bg-sec);
+    color: var(--text-sec);
 }
 
 #contactForm :where(input, select, textarea, button):focus-visible {
-    outline: 2px solid var(--accent-purple); 
+    outline: 2px solid var(--accent-teal); 
     outline-offset: 2px;
 }
 
 #contactForm .btn { 
-    margin: 0.2rem;
+    margin: 0.5rem auto;
     filter: brightness(0.95); 
     padding: 7px 15px;
 }
@@ -396,7 +427,7 @@ label {
     opacity: .6; 
     cursor: not-allowed; 
 }
-/* Подсветка ошибочных полей (установите aria-invalid="true") */
+
 [aria-invalid="true"] { 
     border-color: #b00020; 
 }
