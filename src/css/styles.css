@@ -182,9 +182,6 @@ body {
     }
 }
 
-.music-section img {
-    width: 100%;
-}
 
 /* карточки */
 .feature-card {
@@ -296,6 +293,10 @@ body {
     border-left: 4px solid var(--accent-teal);
 }
 
+.music-section img {
+    width: 100%;
+}
+
 .gradient-text {
     background: linear-gradient(135deg, var(--accent-purple), var(--accent-teal));
     -webkit-background-clip: text;
@@ -310,6 +311,12 @@ body {
 
     .hero-subtitle {
         font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .music-section img {
+        display: none;
     }
 }
 
